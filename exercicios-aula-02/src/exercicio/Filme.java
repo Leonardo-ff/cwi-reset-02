@@ -1,4 +1,4 @@
-package exercicio.um;
+package exercicio;
 
 public class Filme {
 
@@ -7,20 +7,24 @@ public class Filme {
     private String duracao;
     private double avaliacao;
     private Diretor diretor;
+    private Ator atorPrincipal;
 
-    public Filme(String nome, String descricaoFilme, String duracao, double avaliacao, Diretor diretor) {
+
+    public Filme(String nome, String descricaoFilme, String duracao, double avaliacao, Diretor diretor, Ator atorPrincipal) {
         this.nome = nome;
         this.descricaoFilme = descricaoFilme;
         this.duracao = duracao;
         this.avaliacao = avaliacao;
         this.diretor = diretor;
+        this.atorPrincipal = atorPrincipal;
     }
 
     public void reproducao(){
         System.out.println("Filme: " + this.nome);
         System.out.println("Descrição: " + this.descricaoFilme);
         System.out.println("Duração: " + this.duracao);
-        System.out.println("Nome Diretor: " + this.diretor.getNome());
+        diretor.exibirDiretor();
+        atorPrincipal.exibirAtor();
         System.out.println();
     }
 }
