@@ -1,6 +1,5 @@
 package exercicio.um;
 
-//Classe criada, mas no momento de sua utilizacao surgiram duvidas, então prefiri deixa-la de fora.
 public class Diretor {
 
     private String nome;
