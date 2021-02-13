@@ -1,40 +1,36 @@
 package exercicio;
 
-public class Diretor {
+public class Diretor extends Pessoa{
 
-    private String nome;
-    private int idade;
+    //private String nome;
+    //private int idade;
+    //private Genero genero;
     private int numeroDeFilmesDirigidos;
-    private Genero genero;
 
-    public Diretor(String nome) {
-        this.nome = nome;
 
-    }
-
-    public Diretor(String nome, int idade, int numeroDeFilmesDirigidos, Genero genero) {
-        this.nome = nome;
-        this.idade = idade;
+    public Diretor(String nome, int idade, Genero genero, int numeroDeFilmesDirigidos) {
+        super(nome, idade, genero);
+        //this.nome = nome;
+        //this.idade = idade;
+        //this.genero = genero;
         this.numeroDeFilmesDirigidos = numeroDeFilmesDirigidos;
-        this.genero = genero;
     }
 
     public String getNome() {
-        return nome;
+        return super.getNome();
     }
 
     public int getIdade() {
-        return idade;
+        return super.getIdade();
     }
 
     public int getNumeroDeFilmesDirigidos() {
         return numeroDeFilmesDirigidos;
     }
 
-    public void exibirDiretor(){
-        System.out.println("Dados do Diretor");
-        System.out.println("---Nome: " + this.nome);
-        System.out.println("---Idade: " + this.idade);
-        System.out.println("---Genero: " + this.genero.getDescricao());
+    @Override
+    public void exibirInfo(){
+        System.out.println("-Dados Diretor");
+        super.exibirInfo();
     }
 }

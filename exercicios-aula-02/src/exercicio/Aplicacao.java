@@ -4,16 +4,16 @@ public class Aplicacao {
 
     public static void main(String[] args) {
 
-        Diretor diretorTenet = new Diretor("Christopher Nolan", 50, 13, Genero.MASCULINO);
-        Ator atorTenet = new Ator("John David Washington", 36, 0, Genero.MASCULINO);
+        Diretor diretorTenet = new Diretor("Christopher Nolan", 50, Genero.MASCULINO, 13);
+        Ator atorTenet = new Ator("John David Washington", 36, Genero.MASCULINO, 0);
 
         Filme filme1 = new Filme("Tenet", "Um agente secreto embarca em uma missão perigosa para \n" +
                 "evitar o início da Terceira Guerra Mundial.", "230", 5.0,
                 diretorTenet, atorTenet);
 
-        Diretor diretorAProcuraDaFelicidade = new Diretor("Gabriele Muccino",53, 12,
-                Genero.MASCULINO);
-        Ator atorAProcuraDaFelicidade = new Ator("Will Smith", 52, 0, Genero.MASCULINO);
+        Diretor diretorAProcuraDaFelicidade = new Diretor("Gabriele Muccino",53, Genero.MASCULINO,
+                12);
+        Ator atorAProcuraDaFelicidade = new Ator("Will Smith", 52, Genero.MASCULINO, 0);
 
         Filme filme2 = new Filme("À Procura da Felicidade",
                 "Chris enfrenta sérios problemas financeiros e Linda, sua esposa, decide partir. \n" +

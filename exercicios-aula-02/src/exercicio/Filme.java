@@ -23,8 +23,8 @@ public class Filme {
         System.out.println("Filme: " + this.nome);
         System.out.println("Descrição: " + this.descricaoFilme);
         System.out.println("Duração: " + this.duracao);
-        diretor.exibirDiretor();
-        atorPrincipal.exibirAtor();
+        diretor.exibirInfo();
+        atorPrincipal.exibirInfo();
         System.out.println();
     }
 }
