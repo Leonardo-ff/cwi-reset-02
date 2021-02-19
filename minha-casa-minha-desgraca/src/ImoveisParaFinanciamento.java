@@ -18,7 +18,9 @@ public class ImoveisParaFinanciamento {
      *      " > Atenção, problema de registro! Imóveis com valor R$ XXX não são aceitos no programa."
      */
     public void registrarImovel(Imovel imovel) {
-        if(imovel.getValor() >= 50000.00 && imovel.getValor() <= 1000000.00) {
+        Double minimo = 50000.00d;
+        Double maximo = 1000000.00d;
+        if(imovel.getValor() >= minimo && imovel.getValor() <= maximo) {
             imoveis.add(imovel);
         } else{
             System.out.println("> Atenção, problema de registro! Imóveis com valor R$ "+ imovel.getValor() +" não são " +

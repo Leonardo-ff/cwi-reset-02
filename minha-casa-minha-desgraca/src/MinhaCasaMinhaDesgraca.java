@@ -18,16 +18,16 @@ public class MinhaCasaMinhaDesgraca {
          *
          * NÃO MODIFICAR ESTA CLASSE ANTES DESTA LINHA.
          */
-        Imovel imovel1 = new Imovel(new Endereco("Rua Avaí", "320", "Ap 303", "Vila Rosa",
-                "Novo Hamburgo", UnidadeFederativa.RS), 250000.00);
-        Imovel imovel2 = new Imovel(new Endereco("Avenida Feitoria", "550", "", "Feitoria",
-                "São Leopoldo", UnidadeFederativa.RS), 400000.00);
-        Imovel imovel3 = new Imovel(new Endereco("Rua Cairici", "400", "", "Tijuca",
-                "Rio de Janeiro", UnidadeFederativa.RJ), 500000.00);
-        Imovel imovel4 = new Imovel(new Endereco("Rua Judite", "45", "", "Vila Madalena",
-                "São Paulo", UnidadeFederativa.SP), 600000.00);
-        Imovel imovel5 = new Imovel(new Endereco("Rua Teste", "40", "", "Testelandia",
-                "Campinas", UnidadeFederativa.SP), 4000.00);
+        Imovel imovel1 = new Apartamento(new Endereco("Rua Avaí", "320", "Ap 303", "Vila Rosa",
+                "Novo Hamburgo", UnidadeFederativa.RS), 250000.00, "3°");
+        Imovel imovel2 = new Casa(new Endereco("Avenida Feitoria", "550", "", "Feitoria",
+                "São Leopoldo", UnidadeFederativa.RS), 400000.00, "Não");
+        Imovel imovel3 = new Casa(new Endereco("Rua Cairici", "400", "", "Tijuca",
+                "Rio de Janeiro", UnidadeFederativa.RJ), 500000.00, "Sim");
+        Imovel imovel4 = new Apartamento(new Endereco("Rua Judite", "45", "Ap 602", "Vila Madalena",
+                "São Paulo", UnidadeFederativa.SP), 600000.00, "6°");
+        Imovel imovel5 = new Casa(new Endereco("Rua Teste", "40", "", "Testelandia",
+                "Campinas", UnidadeFederativa.SP), 4000.00, "Não sei se tem ou não");
 
 
         opcoesParaFinanciamento.registrarImovel(imovel1);

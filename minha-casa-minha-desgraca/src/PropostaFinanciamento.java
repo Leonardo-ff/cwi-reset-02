@@ -37,7 +37,7 @@ public class PropostaFinanciamento {
     }
 
     private void imprimirPropostaAprovada(){
-        System.out.println("Parabéns! Proposta aprovada " + beneficiario.getNome() + " referente ao Imovel " + imovel.apresentacao()
+        System.out.println("Parabéns! Proposta aprovada " + beneficiario.getNome() + " sobre" + imovel.apresentacao()
         + " com o prazo de " + this.prazoPagamento + " meses.");
     }
 

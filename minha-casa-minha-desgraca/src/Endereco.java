@@ -40,11 +40,4 @@ public class Endereco {
         return estado;
     }
 
-    /*public String EnderecoCompleto(){
-        return
-        System.out.println("Logradouro: " + getLogradouro());
-        System.out.println("Numero: " + getNumero() + " Complemento: " + getComplemento());
-        System.out.println("Bairro: " + getBairro());
-        System.out.println("Cidade: " + getCidade() + " - " + getEstado());
-    */
 }

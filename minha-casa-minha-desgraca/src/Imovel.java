@@ -1,8 +1,8 @@
 
-public class Imovel {
+public abstract class Imovel {
 
-    private Endereco endereco;
-    private Double valor;
+    protected Endereco endereco;
+    protected Double valor;
 
     public Imovel(Endereco endereco, Double valor) {
         this.endereco = endereco;
@@ -18,7 +18,7 @@ public class Imovel {
     }
 
     public String apresentacao(){
-        return "localizado em " + this.endereco.getLogradouro() + ", " + this.endereco.getNumero() + " "
+        return "Imovel localizado em " + this.endereco.getLogradouro() + ", " + this.endereco.getNumero() + " "
                 + this.endereco.getComplemento() + " no bairro " + this.endereco.getBairro() + " - "
                 + this.endereco.getCidade() + " - " + this.endereco.getEstado().getDescricao() + ".\nNo Valor de R$ " +
                 this.valor.toString();
