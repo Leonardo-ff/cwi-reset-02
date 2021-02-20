@@ -2,9 +2,9 @@ public class PropostaFinanciamento {
 
     private Beneficiario beneficiario;
     private Imovel imovel;
-    private int prazoPagamento;
+    private Integer prazoPagamento;
 
-    public PropostaFinanciamento(Beneficiario beneficiario, Imovel imovel, int prazoPagamento) {
+    public PropostaFinanciamento(Beneficiario beneficiario, Imovel imovel, Integer prazoPagamento) {
         this.beneficiario = beneficiario;
         this.imovel = imovel;
         this.prazoPagamento = prazoPagamento;

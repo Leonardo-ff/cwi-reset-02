@@ -2,10 +2,10 @@ package exercicio;
 
 public class Diretor extends Pessoa{
 
-    private int numeroDeFilmesDirigidos;
+    private Integer numeroDeFilmesDirigidos;
 
 
-    public Diretor(String nome, int idade, Genero genero, int numeroDeFilmesDirigidos) {
+    public Diretor(String nome, int idade, Genero genero, Integer numeroDeFilmesDirigidos) {
         super(nome, idade, genero);
         this.numeroDeFilmesDirigidos = numeroDeFilmesDirigidos;
     }
@@ -16,7 +16,8 @@ public class Diretor extends Pessoa{
 
     @Override
     public void exibirInfo(){
-        System.out.println("-Dados Diretor");
+        System.out.println("DIRETOR: ");
         super.exibirInfo();
+        System.out.println("-Numero de Filmes dirigidos: " + numeroDeFilmesDirigidos);
     }
 }

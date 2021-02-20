@@ -25,9 +25,9 @@ public class Pessoa {
     }
 
     public void exibirInfo(){
-        System.out.println("---Nome: " + this.nome);
-        System.out.println("---Idade: " + this.idade);
-        System.out.println("---Genero: " + this.genero.getDescricao());
+        System.out.println("-Nome: " + this.nome);
+        System.out.println("-Idade: " + this.idade);
+        System.out.println("-Genero: " + this.genero.getDescricao());
     }
 
 }

@@ -15,7 +15,8 @@ public class Ator extends Pessoa{
 
     @Override
     public void exibirInfo(){
-        System.out.println("-Dados Ator/Atriz");
+        System.out.println("ATOR/ ATRIZ");
         super.exibirInfo();
+        System.out.println("-Numero de Oscars conquistados: " + numeroDeOscarVencidos);
     }
 }

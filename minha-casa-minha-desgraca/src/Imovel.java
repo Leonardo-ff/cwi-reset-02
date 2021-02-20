@@ -21,6 +21,6 @@ public abstract class Imovel {
         return "Imovel localizado em " + this.endereco.getLogradouro() + ", " + this.endereco.getNumero() + " "
                 + this.endereco.getComplemento() + " no bairro " + this.endereco.getBairro() + " - "
                 + this.endereco.getCidade() + " - " + this.endereco.getEstado().getDescricao() + ".\nNo Valor de R$ " +
-                this.valor.toString();
+                valor;
     }
 }
