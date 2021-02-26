@@ -2,7 +2,7 @@ package br.com.banco.desgraca.domain.conta;
 
 import br.com.banco.desgraca.domain.InstituicaoBancaria;
 import br.com.banco.desgraca.domain.Transacao;
-import br.com.banco.desgraca.exception.InstituicaoFinanceiraException;
+import br.com.banco.desgraca.exception.InstituicaoBancariaException;
 import br.com.banco.desgraca.exception.SaqueException;
 
 import java.time.LocalDate;
@@ -13,7 +13,7 @@ public class ContaDigital extends Contas{
         super(numeroConta, instituicaoBancaria);
         if(this.getInstituicaoBancaria() != instituicaoBancaria.NUBANK &&
                 this.getInstituicaoBancaria() != instituicaoBancaria.ITAU){
-            throw new InstituicaoFinanceiraException("Essa Instituiçoes Financeiras não permitem Conta Digital");
+            throw new InstituicaoBancariaException("Essa Instituiçao Financeira não permite Conta Digital" );
         }
     }
 

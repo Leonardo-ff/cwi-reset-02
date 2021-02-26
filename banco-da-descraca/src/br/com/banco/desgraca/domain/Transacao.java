@@ -33,7 +33,7 @@ public class Transacao {
 
     @Override
     public String toString() {
-        return String.format("\t%s * \t%s * \t%s",
+        return String.format("\t%s  \t%s  \t%s",
                 this.tipoTransacao.getSimboloTransacao(),
                 DecimalFormat.getCurrencyInstance().format(this.valorTransacao),
                 dataTransacao.format(FORMATO));

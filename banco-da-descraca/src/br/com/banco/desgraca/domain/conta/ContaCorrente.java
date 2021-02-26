@@ -38,11 +38,8 @@ public class ContaCorrente extends Contas{
         }
     }
 
-    //TODO função toString
-
-
     @Override
     public String toString() {
-        return "Conta Corrente " + this.getInstituicaoBancaria() + " " + this.getNumeroConta();
+        return "Conta Corrente " + this.getInstituicaoBancaria() + " " + this.getNumeroConta() ;
     }
 }

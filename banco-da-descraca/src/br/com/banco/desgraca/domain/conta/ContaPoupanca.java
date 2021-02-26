@@ -23,6 +23,6 @@ public class ContaPoupanca extends Contas{
 
     @Override
     public String toString() {
-        return "Conta Poupança " + this.getInstituicaoBancaria() + " " + this.getNumeroConta();
+        return "Conta Poupança " + this.getInstituicaoBancaria() + " " + this.getNumeroConta() + "\n";
     }
 }

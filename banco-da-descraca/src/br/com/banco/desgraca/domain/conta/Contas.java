@@ -50,7 +50,7 @@ public abstract class Contas implements ContaBancaria{
     public void depositar(Double valor){
         registrarTransacao(new Transacao(TipoTransacao.DEPOSITO, Data.getDataTransacao(), valor));
         this.saldoConta += valor;
-        System.out.printf("Depositando valor %s na Conta Digital %s %d",
+        System.out.printf("Depositando valor %s na Conta Digital %s %d\n",
                 DecimalFormat.getCurrencyInstance().format(valor),
                 this.instituicaoBancaria.getBanco(), this.numeroConta);
     }
@@ -58,11 +58,11 @@ public abstract class Contas implements ContaBancaria{
     @Override
     public void sacar(Double valor) {
         if(valor > this.saldoConta){
-            throw new SaldoInsuficienteException("Saldo Insuficiente para realização da transferencia");
+            throw new SaldoInsuficienteException("Saldo Insuficiente para realização de saque\n");
         } else {
             registrarTransacao(new Transacao(TipoTransacao.SAQUE, Data.getDataTransacao(), valor));
             this.saldoConta -= valor;
-            System.out.printf("Sacando o valor de %s da Conta Digital %s %d",
+            System.out.printf("Sacando o valor de %s da Conta Digital %s %d\n",
                     DecimalFormat.getCurrencyInstance().format(valor),
                     this.instituicaoBancaria.getBanco(), this.numeroConta);
         }
@@ -71,12 +71,12 @@ public abstract class Contas implements ContaBancaria{
     @Override
     public void transferir(Double valor, ContaBancaria contaDestino) {
         if(valor > this.saldoConta){
-            throw new SaqueException("Saldo Insuficiente para realização da transferencia");
+            throw new SaqueException("Saldo Insuficiente para realização da transferencia\n");
         } else{
             registrarTransacao(new Transacao(TipoTransacao.TRANSFERENCIA, Data.getDataTransacao(), valor));
             this.saldoConta -= valor;
             contaDestino.depositar(valor);
-            System.out.printf("Transferindo o valor de %s da Conta Digital %s %d para a Conta %s %d",
+            System.out.printf("Transferindo o valor de %s da Conta Digital %s %d para a Conta %s %d\n",
                     DecimalFormat.getCurrencyInstance().format(valor),
                     this.instituicaoBancaria.getBanco(), this.numeroConta,
                     contaDestino.getInstituicaoBancaria().getBanco(),
@@ -94,10 +94,10 @@ public abstract class Contas implements ContaBancaria{
 
     @Override
     public void exibirExtrato(LocalDate inicio, LocalDate fim) {
-        System.out.printf("----- EXTRATO %s %d ----", this.toString(), this.numeroConta);
+        System.out.printf("----- EXTRATO %s ----\n", this.toString());
         if(inicio != null && fim == null){
             for (Transacao transacao: transacoes) {
-                if(transacao.getDataTransacao().isEqual(inicio) || transacao.getDataTransacao().isAfter(fim) ){
+                if(transacao.getDataTransacao().isEqual(inicio) || transacao.getDataTransacao().isAfter(inicio) ){
                     System.out.println(transacao);
                 }
             }
