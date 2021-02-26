@@ -3,6 +3,9 @@ import java.util.List;
 
 public class ImoveisParaFinanciamento {
 
+    private static final Double VALOR_MINIMO_IMOVEL = 50000.0;
+    private static final Double VALOR_MAXIMO_IMOVEL = 1000000.0;
+
     private List<Imovel> imoveis;
 
     public ImoveisParaFinanciamento() {
@@ -18,16 +21,13 @@ public class ImoveisParaFinanciamento {
      *      " > Atenção, problema de registro! Imóveis com valor R$ XXX não são aceitos no programa."
      */
     public void registrarImovel(Imovel imovel) {
-        Double minimo = 50000.00d;
-        Double maximo = 1000000.00d;
-        if(imovel.getValor() >= minimo && imovel.getValor() <= maximo) {
+
+        if(imovel.getValor() >= VALOR_MINIMO_IMOVEL && imovel.getValor() <= VALOR_MAXIMO_IMOVEL) {
             imoveis.add(imovel);
         } else{
             System.out.println("> Atenção, problema de registro! Imóveis com valor R$ "+ imovel.getValor() +" não são " +
                     "aceitos no programa.");
         }
-        // se "imovel" corresponder às regras, adicioná-lo à lista "imoveis" com o seguinte código:
-        //    imoveis.add(imovel);
     }
 
     /**
@@ -42,8 +42,7 @@ public class ImoveisParaFinanciamento {
             if(imovel.getValor()<= valorLimite){
                 opcoes.add(imovel);
             }
-            // se "imovel" corresponder às regras, adicioná-lo à lista de opcoes com o seguinte código:
-            //    opcoes.add(imovel);
+
         }
         return opcoes;
     }

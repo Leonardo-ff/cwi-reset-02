@@ -17,23 +17,33 @@ public enum UnidadeFederativa {
     PE("Pernambuco"),
     PI("Piauí"),
     PR("Paraná"),
-    RJ("Rio de Janeiro"),
+    RJ("Rio de Janeiro", 0.6),
     RN("Rio Grande do Norte"),
     RO("Rondônia"),
     RR("Roraima"),
     RS("Rio Grande do Sul"),
     SC("Santa Catarina"),
     SE("Sergipe"),
-    SP("São Paulo"),
+    SP("São Paulo", 0.65),
     TO("Tocantins");
 
     private String descricao;
+    private Double percentualPagamento;
 
     UnidadeFederativa(String descricao) {
+        this(descricao, 0.5);
+    }
+
+    UnidadeFederativa(String descricao, Double percentualPagamento) {
         this.descricao = descricao;
+        this.percentualPagamento = percentualPagamento;
     }
 
     public String getDescricao() {
         return descricao;
+    }
+
+    public Double getPercentualPagamento() {
+        return percentualPagamento;
     }
 }

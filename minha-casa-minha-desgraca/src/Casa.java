@@ -7,6 +7,10 @@ public class Casa extends Imovel{
         this.patio = patio;
     }
 
+    public String getPatio() {
+        return patio;
+    }
+
     public String apresentacao(){
         return "Casa localizada em " + this.endereco.getLogradouro() + ", " + this.endereco.getNumero() + " "
                 + this.endereco.getComplemento() +" no bairro " +

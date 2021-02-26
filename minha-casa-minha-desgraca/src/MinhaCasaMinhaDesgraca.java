@@ -18,14 +18,22 @@ public class MinhaCasaMinhaDesgraca {
          *
          * NÃO MODIFICAR ESTA CLASSE ANTES DESTA LINHA.
          */
-        Imovel imovel1 = new Apartamento(new Endereco("Rua Avaí", "320", "Ap 303", "Vila Rosa",
+        Imovel imovel1 = new Apartamento(new Endereco("Rua Avaí", "320", "Ap 303",
+                "Vila Rosa",
                 "Novo Hamburgo", UnidadeFederativa.RS), 250000.00, "3°");
-        Imovel imovel2 = new Casa(new Endereco("Avenida Feitoria", "550", "", "Feitoria",
+
+        Imovel imovel2 = new Casa(new Endereco("Avenida Feitoria", "550", "",
+                "Feitoria",
                 "São Leopoldo", UnidadeFederativa.RS), 400000.00, "Não");
-        Imovel imovel3 = new Casa(new Endereco("Rua Cairici", "400", "", "Tijuca",
+
+        Imovel imovel3 = new Casa(new Endereco("Rua Cairici", "400", "",
+                "Tijuca",
                 "Rio de Janeiro", UnidadeFederativa.RJ), 500000.00, "Sim");
-        Imovel imovel4 = new Apartamento(new Endereco("Rua Judite", "45", "Ap 602", "Vila Madalena",
+
+        Imovel imovel4 = new Apartamento(new Endereco("Rua Judite", "45", "Ap 602",
+                "Vila Madalena",
                 "São Paulo", UnidadeFederativa.SP), 600000.00, "6°");
+
         Imovel imovel5 = new Casa(new Endereco("Rua Teste", "40", "", "Testelandia",
                 "Campinas", UnidadeFederativa.SP), 4000.00, "Não sei se tem ou não");
 
@@ -46,7 +54,8 @@ public class MinhaCasaMinhaDesgraca {
 
         List<Imovel> todasAsOpcoes = opcoesParaFinanciamento.buscarOpcoes(Double.MAX_VALUE);
         if (todasAsOpcoes == null || todasAsOpcoes.isEmpty()) {
-            throw new RuntimeException("\n\nAtenção! Você precisa registrar opções de financiamento antes de começar a usar o programa.\n"
+            throw new RuntimeException("\n\nAtenção! Você precisa registrar opções de financiamento antes de começar " +
+                    "a usar o programa.\n"
                     + "Use o método 'registrarImovel', do objeto 'opcoesParaFinanciamento', para incluir algumas opções.\n");
         }
 

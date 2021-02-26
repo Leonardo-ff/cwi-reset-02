@@ -20,6 +20,7 @@ public class PropostaFinanciamento {
      *      o salário multiplicado pelo prazo deve ser equivalente a 65% e 60% do valor imóvel (respectivamente).
      */
     public void validarProposta() {
+       /*
         Double deltaSalario = beneficiario.getSalario() * prazoPagamento;
         Double cinquentaPorCentoImovel = imovel.getValor() * 0.5;
         Double sessentaPorCentoImovel = imovel.getValor() * 0.6;
@@ -34,6 +35,18 @@ public class PropostaFinanciamento {
         } else{
             imprimirPropostaNegada();
         }
+
+        */
+
+        Double capacidadePagamento = beneficiario.getSalario() * prazoPagamento;
+        Double minimoParaPagamento = imovel.getValor() * imovel.getEndereco().getEstado().getPercentualPagamento();
+        boolean propostaAprovada = capacidadePagamento >= minimoParaPagamento;
+
+        if (propostaAprovada) {
+            imprimirPropostaAprovada();
+        } else {
+            imprimirPropostaNegada();
+        }
     }
 
     private void imprimirPropostaAprovada(){
@@ -44,5 +57,11 @@ public class PropostaFinanciamento {
     private void imprimirPropostaNegada(){
         System.out.println("Não vai rolar "+ beneficiario.getNome() + ", proposta abaixo do minimo para o imovel " + imovel.apresentacao()
                 + " com o prazo de " + this.prazoPagamento + " meses.");
+    }
+
+    private void imprimirPropostaPadrao() {
+        System.out.println(" - Beneficiário: "+beneficiario.getNome());
+        System.out.println(" - Imóvel: "+imovel.apresentacao());
+        System.out.println(" - Prazo da desgraça: "+prazoPagamento);
     }
 }

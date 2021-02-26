@@ -1,5 +1,6 @@
 package exercicio;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,8 +9,8 @@ public class Aplicacao {
     public static void main(String[] args) {
 
 
-        Diretor diretorTenet = new Diretor("Christopher Nolan", 50, Genero.MASCULINO, 13);
-        Ator atorTenet = new Ator("John David Washington", 36, Genero.MASCULINO, 0);
+        Diretor diretorTenet = new Diretor("Christopher Nolan", LocalDate.of(1990, 12, 30), Genero.MASCULINO, 13);
+        Ator atorTenet = new Ator("John David Washington", LocalDate.of(1989, 03, 20), Genero.MASCULINO, 0);
         List<Pessoa> elencoTenet = new ArrayList<>();
 
         elencoTenet.add(diretorTenet);
@@ -37,20 +38,20 @@ public class Aplicacao {
         //filme2.reproducao();
 
         Pessoa diretorTeste = new Diretor("Leonardo",
-                28,
+                LocalDate.of(1990, 12, 30),
                 Genero.MASCULINO,
                 10);
 
         Pessoa atorUm = new Ator("Luis",
-                33,
+                LocalDate.of(1990, 12, 30),
                 Genero.MASCULINO,
                 0);
         Pessoa atorDois = new Ator("Luisinho",
-                36,
+                LocalDate.of(1990, 12, 30),
                 Genero.MASCULINO,
                 0);
         Pessoa atorTres = new Ator("Luiseta",
-                44,
+                LocalDate.of(1990, 12, 30),
                 Genero.FEMININO,
                 3);
         List<Pessoa> elencoTeste = new ArrayList<>();

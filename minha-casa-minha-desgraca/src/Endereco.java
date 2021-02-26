@@ -7,7 +7,8 @@ public class Endereco {
     private String cidade;
     private UnidadeFederativa estado;
 
-    public Endereco(String logradouro, String numero, String complemento, String bairro, String cidade, UnidadeFederativa estado) {
+    public Endereco(String logradouro, String numero, String complemento, String bairro, String cidade,
+                    UnidadeFederativa estado) {
         this.logradouro = logradouro;
         this.numero = numero;
         this.complemento = complemento;
@@ -39,5 +40,12 @@ public class Endereco {
     public UnidadeFederativa getEstado() {
         return estado;
     }
+
+    @Override
+    public String toString() {
+        return getLogradouro() + ", nº "+ getNumero()+", no bairro "+getBairro()
+                + ", em "+getCidade()+"/"+getEstado();
+    }
+
 
 }

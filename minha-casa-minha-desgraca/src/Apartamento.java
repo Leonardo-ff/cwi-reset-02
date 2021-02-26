@@ -8,6 +8,11 @@ public class Apartamento extends Imovel{
         this.andar = andarApartamento;
     }
 
+    public String getAndar() {
+        return andar;
+    }
+
+    @Override
     public String apresentacao(){
         return "Apartamento localizado em " + this.endereco.getLogradouro() + ", " + this.endereco.getNumero() + " "
                 + this.endereco.getComplemento() + " " + this.andar + " andar," +" no bairro " +
