@@ -23,6 +23,7 @@ public class DiretoresRepository {
     public Long criarDiretor(final DiretoresEntity diretorSalvar){
         if(diretorSalvar.getId() == null){
             diretorSalvar.setId(contadorIdsDiretor);
+            contadorIdsDiretor++;
         }
 
         diretores.add(diretorSalvar);

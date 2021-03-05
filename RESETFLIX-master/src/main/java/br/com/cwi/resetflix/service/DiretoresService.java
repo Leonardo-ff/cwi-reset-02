@@ -26,7 +26,7 @@ public class DiretoresService {
     static DiretorEntityMapper MAPPER_ENTITY_DIRETOR = new DiretorEntityMapper();
     static ConsultarDetalhesDiretorResponseMapper MAPPER_DETALHES_DIRETOR = new ConsultarDetalhesDiretorResponseMapper();
 
-    public List<DiretoresResponse> getDiretors() {
+    public List<DiretoresResponse> getDiretores() {
         final List<DiretoresEntity> diretores = diretoresRepository.getDiretores();
         return MAPPER_RESPONSE_DIRETOR.mapear(diretores);
     }
@@ -41,10 +41,5 @@ public class DiretoresService {
         List<FilmeEntity> filmesDiretor = filmeRepository.acharFilmesDiretor(id);
         return MAPPER_DETALHES_DIRETOR.mapear(diretorSalvo, filmesDiretor);
     }
-    /*
-    * public ConsultarDetalhesAtorResponse consultarDetalhesAtor(final Long id) {
-        AtorEntity atorSalvo = atoresRepository.acharAtorPorId(id);
-        List<FilmeEntity> filmesAtor = filmeRepository.acharFilmesAtor(id);
-        return MAPPER_DETALHES_ATOR.mapear(atorSalvo, filmesAtor);
-    }*/
+
 }

@@ -5,9 +5,7 @@ import br.com.cwi.resetflix.response.ConsultarDetalhesDiretorResponse;
 import br.com.cwi.resetflix.response.DiretoresResponse;
 import br.com.cwi.resetflix.service.DiretoresService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,17 +19,19 @@ public class DiretoresController implements DiretoresContract{
     @Override
     @GetMapping
     public List<DiretoresResponse> getDiretores(){
-        return diretoresService.getDiretors();
+        return diretoresService.getDiretores();
     }
 
     @Override
+    @GetMapping("/{id}")
     public ConsultarDetalhesDiretorResponse getDiretorById(Long id) {
-        return null;
+        return diretoresService.consultarDetalhesDiretor(id);
     }
 
     @Override
-    public Long criarDiretor(CriarDiretorRequest request) {
-        return null;
+    @PostMapping
+    public Long criarDiretor(@RequestBody final CriarDiretorRequest request) {
+        return diretoresService.criarDiretor(request);
     }
 
 

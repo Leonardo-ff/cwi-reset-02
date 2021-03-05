@@ -26,23 +26,32 @@ public class FilmeRepository {
         List<FilmeEntity> filmesAtor = new ArrayList<>();
 
         for(FilmeEntity filmeEntity: filmes){
-            if(filmeEntity.getIdsAtores().)
-        }
-
-        return filmes;
-    }
-
-    /*
-    * for(AtorEntity atorEntity : atores){
-            if(atorEntity.getId().equals(id)){
-                return atorEntity;
+            if(filmeEntity.getIdsAtores().equals(id)){
+                filmesAtor.add(filmeEntity);
             }
         }
+            return filmesAtor;
+    }
 
-        return null;*/
 
-    public List<FilmeEntity> acharFilmesDiretor() {
+    public List<FilmeEntity> acharFilmesDiretor(final Long id) {
         //TODO Filtrar na repository por Id de Diretor
-        return filmes;
+        List<FilmeEntity> filmesDiretor = new ArrayList<>();
+
+        for(FilmeEntity filmeEntity: filmes){
+            if(filmeEntity.getIdDiretor().equals(id)){
+                filmesDiretor.add(filmeEntity);
+            }
+        }
+            return filmesDiretor;
+    }
+
+    public Long criarFilme(FilmeEntity filmesSalvar) {
+        if(filmesSalvar.getId() == null){
+            filmesSalvar.setId(contadorIdFilmes);
+            contadorIdFilmes++;
+        }
+        filmes.add(filmesSalvar);
+        return filmesSalvar.getId();
     }
 }
